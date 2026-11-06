@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venus Institute of Hospitality Management | Online Training NYC</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Playfair Display & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#1E293B',
+                            900: '#0F172A',
+                            950: '#020617',
+                        },
+                        gold: {
+                            300: '#FDE68A',
+                            400: '#F59E0B',
+                            500: '#D97706',
+                            600: '#B45309',
+                        },
+                        cream: '#FAF9F6',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 50%, #B45309 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+        }
+        .gold-gradient-bg:hover {
+            background: linear-gradient(135deg, #FBBF24 0%, #B45309 100%);
+        }
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(15, 23, 42, 0.90) 0%, rgba(15, 23, 42, 0.96) 100%), 
+                        url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+        }
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+        }
+        .card-hover-effect {
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px -10px rgba(217, 119, 6, 0.2);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0F172A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D97706;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-cream antialiased selection:bg-gold-500 selection:text-navy-950">
+
+    <!-- DYNAMIC TOAST NOTIFICATION -->
+    <div id="toast" class="fixed top-24 right-5 z-50 transform translate-x-full transition-transform duration-300 ease-in-out bg-navy-900 border border-gold-500/40 text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center space-x-4 max-w-md">
+        <div class="w-10 h-10 rounded-full gold-gradient-bg flex items-center justify-center text-navy-950 text-lg flex-shrink-0">
+            <i class="fas fa-check"></i>
+        </div>
+        <div>
+            <h4 class="font-serif font-bold text-base text-gold-300" id="toast-title">Request Received</h4>
+            <p class="text-xs text-slate-300 mt-0.5" id="toast-message">Thank you! Our NY online admissions team will contact you shortly.</p>
+        </div>
+    </div>
+
+    <!-- TOP ANNOUNCEMENT BAR WITH DIRECT CONTACT -->
+    <div class="bg-navy-950 text-slate-300 text-xs py-2 px-4 border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-4">
+                <span class="flex items-center"><i class="fas fa-laptop-house text-gold-400 mr-2"></i> 100% Online Hospitality Programs • New York, USA</span>
+                <span class="hidden md:inline text-slate-600">|</span>
+                <span class="hidden md:inline"><i class="fas fa-certificate text-gold-400 mr-1.5"></i> NY Recognized Certifications</span>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="tel:3476495804" class="hover:text-gold-400 transition-colors flex items-center font-semibold">
+                    <i class="fas fa-phone-alt text-gold-400 mr-1.5"></i> 347-649-5804
+                </a>
+                <a href="mailto:aamralex@gmail.com" class="hover:text-gold-400 transition-colors flex items-center font-semibold">
+                    <i class="fas fa-envelope text-gold-400 mr-1.5"></i> aamralex@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1. HEADER & NAVIGATION -->
+    <header class="sticky top-0 z-40 glass-nav border-b border-gold-500/20 text-white transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-11 h-11 rounded-full gold-gradient-bg flex items-center justify-center text-navy-950 shadow-lg border border-gold-300/40 group-hover:scale-105 transition-transform">
+                        <i class="fas fa-graduation-cap text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-lg sm:text-xl tracking-tight text-white block leading-none">
+                            VENUS <span class="gold-gradient-text">INSTITUTE</span>
+                        </span>
+                        <span class="text-[9px] text-gold-400 tracking-widest uppercase font-semibold block mt-1">Online Hospitality Training • NYC, USA</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-7">
+                    <a href="#about" class="text-xs uppercase tracking-widest font-semibold text-slate-200 hover:text-gold-400 transition-colors">Online Advantage</a>
+                    <a href="#programs" class="text-xs uppercase tracking-widest font-semibold text-slate-200 hover:text-gold-400 transition-colors">Online Courses</a>
+                    <a href="#calculator" class="text-xs uppercase tracking-widest font-semibold text-slate-200 hover:text-gold-400 transition-colors">Tuition Calculator</a>
+                    <a href="#lms-demo" class="text-xs uppercase tracking-widest font-semibold text-slate-200 hover:text-gold-400 transition-colors">Student Portal</a>
+                    <a href="#faq" class="text-xs uppercase tracking-widest font-semibold text-slate-200 hover:text-gold-400 transition-colors">FAQ</a>
+                    <a href="#contact" class="text-xs uppercase tracking-widest font-semibold text-slate-200 hover:text-gold-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden lg:flex items-center space-x-4">
+                    <a href="#enroll" class="gold-gradient-bg text-navy-950 font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-full shadow-lg transition-all transform hover:-translate-y-0.5">
+                        Enroll Online
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <div class="lg:hidden flex items-center">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-200 hover:text-white p-2 focus:outline-none" aria-label="Toggle Navigation">
+                        <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div class="hidden lg:hidden bg-navy-950 border-b border-gold-500/20 px-6 py-6 space-y-4 shadow-2xl" id="mobile-menu">
+            <a href="#about" class="mobile-link block text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-gold-400">100% Online Training</a>
+            <a href="#programs" class="mobile-link block text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-gold-400">Online Programs & Certificates</a>
+            <a href="#calculator" class="mobile-link block text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-gold-400">Tuition Calculator</a>
+            <a href="#lms-demo" class="mobile-link block text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-gold-400">Virtual LMS Classroom Demo</a>
+            <a href="#faq" class="mobile-link block text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-gold-400">Frequently Asked Questions</a>
+            <a href="#contact" class="mobile-link block text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-gold-400">Contact NY Office</a>
+            <div class="pt-4 border-t border-slate-800 flex flex-col space-y-3">
+                <a href="tel:3476495804" class="text-center bg-navy-800 text-gold-400 font-bold text-xs py-3 rounded-xl border border-gold-500/30">
+                    <i class="fas fa-phone-alt mr-2"></i> Call: 347-649-5804
+                </a>
+                <a href="#enroll" class="mobile-link text-center gold-gradient-bg text-navy-950 font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl shadow-md">
+                    Enroll Online Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="py-20 lg:py-28 hero-overlay text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-white/5 border border-gold-500/30 rounded-full px-5 py-2 backdrop-blur-md">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                        <span class="text-xs uppercase tracking-widest text-gold-300 font-semibold">New York City, USA • 100% Online Distance Learning</span>
+                    </div>
+
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+                        Master Luxury Hospitality & Hotel Management <span class="gold-gradient-text italic font-normal">100% Online</span>
+                    </h1>
+
+                    <p class="text-slate-300 text-sm sm:text-base leading-relaxed max-w-2xl font-light mx-auto lg:mx-0">
+                        Study flexible online hospitality training programs certified in New York, USA. Learn from NYC industry veterans, participate in live virtual masterclasses, and receive direct US/Global career placement assistance.
+                    </p>
+
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#programs" class="w-full sm:w-auto gold-gradient-bg text-navy-950 font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-full shadow-2xl hover:brightness-110 transition-all text-center">
+                            Explore Online Courses
+                        </a>
+                        <a href="#enroll" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold text-xs uppercase tracking-widest px-8 py-4 rounded-full transition-all text-center backdrop-blur-md">
+                            Apply Online Today
+                        </a>
+                    </div>
+
+                    <!-- Direct Contact Quick Bar -->
+                    <div class="pt-6 border-t border-gold-500/20 flex flex-wrap justify-center lg:justify-start gap-6 text-xs text-slate-300">
+                        <a href="tel:3476495804" class="flex items-center hover:text-gold-300 transition-colors">
+                            <i class="fas fa-headset text-gold-400 text-sm mr-2"></i> Phone: 347-649-5804
+                        </a>
+                        <a href="mailto:aamralex@gmail.com" class="flex items-center hover:text-gold-300 transition-colors">
+                            <i class="fas fa-envelope-open-text text-gold-400 text-sm mr-2"></i> aamralex@gmail.com
+                        </a>
+                        <span class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-gold-400 text-sm mr-2"></i> New York, NY, USA
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Hero Quick Contact / Enrollment Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card p-6 sm:p-8 rounded-3xl shadow-2xl border border-gold-500/30">
+                        <div class="flex items-center justify-between mb-6 border-b border-white/10 pb-4">
+                            <div>
+                                <h3 class="font-serif font-bold text-xl text-gold-300">Online Admissions Office</h3>
+                                <p class="text-xs text-slate-300">New York, USA Desk</p>
+                            </div>
+                            <span class="w-3 h-3 rounded-full bg-emerald-400" title="Online Admissions Open"></span>
+                        </div>
+
+                        <form id="hero-quick-form" class="space-y-4">
+                            <div>
+                                <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-200 mb-1">Full Name</label>
+                                <input type="text" required class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950/80 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none" placeholder="Your Full Name">
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-200 mb-1">Phone Number</label>
+                                    <input type="tel" required class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950/80 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none" placeholder="347-649-5804">
+                                </div>
+                                <div>
+                                    <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-200 mb-1">Email</label>
+                                    <input type="email" required class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950/80 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none" placeholder="aamralex@gmail.com">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-200 mb-1">Program Interest</label>
+                                <select required class="w-full px-3.5 py-2.5 rounded-xl bg-navy-950/80 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none">
+                                    <option>Hotel & Resort Management Diploma (Online)</option>
+                                    <option>Food & Beverage Leadership (Online)</option>
+                                    <option>Event & Wedding Planning Certificate (Online)</option>
+                                    <option>Front Office & Concierge Specialist (Online)</option>
+                                    <option>Luxury Service Excellence (Online)</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="w-full gold-gradient-bg text-navy-950 font-bold text-xs uppercase tracking-widest py-3.5 rounded-xl shadow-xl hover:brightness-110 transition-all">
+                                Request Course Prospectus
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. ONLINE ADVANTAGE & FEATURES -->
+    <section id="about" class="py-20 bg-navy-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-400 block mb-2">Flexible Distance Learning</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold">
+                    Why Study Online with <span class="gold-gradient-text italic font-normal">Venus Institute NYC</span>?
+                </h2>
+                <div class="w-16 h-0.5 gold-gradient-bg mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-2xl card-hover-effect">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white mb-2">100% Flexible Learning</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-light">
+                        Study 24/7 self-paced modules alongside working full-time. Access high-definition video lectures, digital workbooks, and case studies anywhere in the world.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl card-hover-effect">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white mb-2">Live NYC Masterclasses</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-light">
+                        Interact live with veteran General Managers, Sommelier experts, and Operations Directors operating inside New York City's top 5-star hotels and Michelin restaurants.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl card-hover-effect">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white mb-2">US Certified Digital Credentials</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-light">
+                        Earn verifiable digital diplomas and certificates issued from New York, USA, easily shareable on LinkedIn and recognized by international hotel brands.
+                    </p>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl card-hover-effect">
+                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 text-gold-400 flex items-center justify-center text-xl mb-4">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-white mb-2">Placement Support & Coaching</h3>
+                    <p class="text-slate-300 text-xs leading-relaxed font-light">
+                        Receive 1-on-1 resume optimization, mock interview drills with NYC executives, and direct internship/job referral pathways across global luxury chains.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ONLINE TRAINING COURSES WITH SEARCH & FILTER -->
+    <section id="programs" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600 block mb-2">Online Catalog</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900">
+                    Online Training Programs & Certifications
+                </h2>
+                <p class="text-slate-600 text-xs sm:text-sm mt-2 font-light">Select a specialty program to view curriculum breakdown and enrollment tuition.</p>
+            </div>
+
+            <!-- Search & Filter Controls -->
+            <div class="max-w-4xl mx-auto mb-10 space-y-4">
+                <div class="relative">
+                    <i class="fas fa-search absolute left-4 top-3.5 text-slate-400"></i>
+                    <input type="text" id="course-search-input" placeholder="Search by course name or keyword (e.g. Revenue, F&B, Event)..." class="w-full pl-11 pr-4 py-3 bg-white rounded-2xl border border-slate-300 text-xs text-slate-800 shadow-sm focus:border-gold-500 focus:outline-none">
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-2" id="program-filters">
+                    <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider gold-gradient-bg text-navy-950 shadow-md transition-all" data-filter="all">All Online Courses</button>
+                    <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-slate-200 text-slate-700 hover:border-gold-500 transition-all" data-filter="diploma">Diplomas</button>
+                    <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-slate-200 text-slate-700 hover:border-gold-500 transition-all" data-filter="certificate">Certificates</button>
+                    <button class="filter-btn px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider bg-white border border-slate-200 text-slate-700 hover:border-gold-500 transition-all" data-filter="executive">Executive</button>
+                </div>
+            </div>
+
+            <!-- Course Cards Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="program-grid">
+                
+                <!-- Course 1 -->
+                <div class="program-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm card-hover-effect flex flex-col justify-between"
+                     data-category="diploma"
+                     data-title="Online Diploma in Hotel & Resort Management"
+                     data-duration="6 Months (Online Self-Paced)"
+                     data-tuition="$2,450 USD"
+                     data-outcomes="Assistant General Manager, Hotel Operations Lead, Front Desk Manager"
+                     data-overview="Master overall hotel operations, property management system (PMS) logic, revenue management, guest satisfaction metrics, and corporate financial stewardship through 100% online modules."
+                     data-syllabus="Cloud PMS Systems & Front Desk Operations, Luxury Guest Experience Design, Hotel Revenue Management, Staff Leadership & HR, Hospitality Financial Accounting">
+                    <div>
+                        <div class="h-52 bg-navy-900 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Hotel Management" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 gold-gradient-bg text-navy-950 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow">Online Diploma</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-xs text-gold-600 font-semibold mb-2 space-x-3">
+                                <span><i class="far fa-clock mr-1"></i> 6 Months</span>
+                                <span><i class="fas fa-wifi mr-1"></i> 100% Online</span>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Hotel & Resort Management Diploma</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed font-light line-clamp-3">
+                                Comprehensive operational training covering PMS cloud tools, guest experience design, and hospitality leadership.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button class="open-modal-btn w-full py-3 bg-navy-900 text-white hover:bg-gold-500 hover:text-navy-950 font-bold text-xs uppercase tracking-widest rounded-xl transition-all">
+                            View Curriculum Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="program-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm card-hover-effect flex flex-col justify-between"
+                     data-category="certificate"
+                     data-title="Food & Beverage Leadership & Restaurant Operations"
+                     data-duration="4 Months (Online Self-Paced)"
+                     data-tuition="$1,650 USD"
+                     data-outcomes="Restaurant Manager, F&B Supervisor, Beverage Operations Specialist"
+                     data-overview="An intensive online course covering restaurant cost controls, menu engineering, food safety HACCP guidelines, mixology trends, and luxury dining floor standards."
+                     data-syllabus="Food & Beverage Cost Control, Menu Pricing Strategy, Hygiene & Safety Compliance, Wine & Beverage Knowledge, Staff Service Training">
+                    <div>
+                        <div class="h-52 bg-navy-900 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80" alt="F&B Leadership" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-slate-800 text-slate-200 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow">Online Certificate</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-xs text-gold-600 font-semibold mb-2 space-x-3">
+                                <span><i class="far fa-clock mr-1"></i> 4 Months</span>
+                                <span><i class="fas fa-utensils mr-1"></i> F&B Focus</span>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Food & Beverage Leadership</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed font-light line-clamp-3">
+                                Master high-margin restaurant operations, menu costing, wine pairings, and fine dining management.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button class="open-modal-btn w-full py-3 bg-navy-900 text-white hover:bg-gold-500 hover:text-navy-950 font-bold text-xs uppercase tracking-widest rounded-xl transition-all">
+                            View Curriculum Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="program-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm card-hover-effect flex flex-col justify-between"
+                     data-category="certificate"
+                     data-title="Online Certificate in Event & Wedding Planning"
+                     data-duration="3 Months (Online)"
+                     data-tuition="$1,250 USD"
+                     data-outcomes="Event Coordinator, Wedding Planner, Gala Producer"
+                     data-overview="Learn to concept, plan, budget, and execute high-profile corporate conferences, luxury weddings, and VIP galas through interactive online case studies."
+                     data-syllabus="Event Design & Floorplans, Vendor Negotiations, Budget Management, Event Marketing & Sponsorship, On-site Coordination Protocols">
+                    <div>
+                        <div class="h-52 bg-navy-900 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Event Planning" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-slate-800 text-slate-200 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow">Online Certificate</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-xs text-gold-600 font-semibold mb-2 space-x-3">
+                                <span><i class="far fa-clock mr-1"></i> 3 Months</span>
+                                <span><i class="fas fa-calendar-alt mr-1"></i> Event Focus</span>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Event & Wedding Planning</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed font-light line-clamp-3">
+                                Professional event design, budgeting, vendor contract management, and virtual event logistics.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button class="open-modal-btn w-full py-3 bg-navy-900 text-white hover:bg-gold-500 hover:text-navy-950 font-bold text-xs uppercase tracking-widest rounded-xl transition-all">
+                            View Curriculum Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="program-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm card-hover-effect flex flex-col justify-between"
+                     data-category="certificate"
+                     data-title="Front Office & Concierge Specialist"
+                     data-duration="2 Months (Fast-Track Online)"
+                     data-tuition="$950 USD"
+                     data-outcomes="Front Desk Agent, Guest Relations Specialist, VIP Concierge"
+                     data-overview="Specialized training in hotel front desk procedures, guest check-in software, complaint resolution, and high-touch concierge services."
+                     data-syllabus="Cloud PMS Simulation, Check-in & Check-out Standards, Handling Guest Complaints, VIP Concierge Services, Cross-selling & Upselling">
+                    <div>
+                        <div class="h-52 bg-navy-900 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Front Office" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-slate-800 text-slate-200 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow">Online Fast-Track</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-xs text-gold-600 font-semibold mb-2 space-x-3">
+                                <span><i class="far fa-clock mr-1"></i> 2 Months</span>
+                                <span><i class="fas fa-concierge-bell mr-1"></i> Guest Relations</span>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Front Office & Concierge Specialist</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed font-light line-clamp-3">
+                                Practical skills for managing hotel front desk software, guest requests, and VIP services.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button class="open-modal-btn w-full py-3 bg-navy-900 text-white hover:bg-gold-500 hover:text-navy-950 font-bold text-xs uppercase tracking-widest rounded-xl transition-all">
+                            View Curriculum Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="program-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm card-hover-effect flex flex-col justify-between"
+                     data-category="executive"
+                     data-title="Executive Revenue Management & Hotel Analytics"
+                     data-duration="3 Months (Online Executive)"
+                     data-tuition="$1,850 USD"
+                     data-outcomes="Revenue Analyst, E-Commerce Manager, Hotel Yield Manager"
+                     data-overview="Advanced online program focused on dynamic pricing, demand forecasting, occupancy analytics, OTA channel management, and RevPAR maximization."
+                     data-syllabus="Forecasting Models, Dynamic Room Pricing, Online Travel Agency (OTA) Distribution, Competitor Rate Shopping, KPI Analytics (RevPAR, ADR, Occupancy)">
+                    <div>
+                        <div class="h-52 bg-navy-900 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Revenue Management" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-navy-900 text-gold-300 border border-gold-500/40 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow">Executive</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-xs text-gold-600 font-semibold mb-2 space-x-3">
+                                <span><i class="far fa-clock mr-1"></i> 3 Months</span>
+                                <span><i class="fas fa-chart-line mr-1"></i> Dynamic Analytics</span>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Executive Revenue Management</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed font-light line-clamp-3">
+                                Data-driven pricing models, demand forecasting, and rate optimization strategies.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button class="open-modal-btn w-full py-3 bg-navy-900 text-white hover:bg-gold-500 hover:text-navy-950 font-bold text-xs uppercase tracking-widest rounded-xl transition-all">
+                            View Curriculum Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="program-card bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-sm card-hover-effect flex flex-col justify-between"
+                     data-category="certificate"
+                     data-title="Luxury Service Excellence & VIP Etiquette"
+                     data-duration="1 Month (Online Micro-Credential)"
+                     data-tuition="$550 USD"
+                     data-outcomes="VIP Service Representative, Butler Specialist, Luxury Ambassador"
+                     data-overview="Master 5-star service protocols, body language, cultural intelligence, and ultra-high-net-worth guest handling standards."
+                     data-syllabus="5-Star Service Benchmarks, Cultural Etiquette, De-escalation & Discretion, VIP Butler Protocols, Service Recovery Excellence">
+                    <div>
+                        <div class="h-52 bg-navy-900 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Luxury Excellence" class="w-full h-full object-cover">
+                            <span class="absolute top-4 left-4 bg-slate-800 text-slate-200 font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow">Micro-Credential</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center text-xs text-gold-600 font-semibold mb-2 space-x-3">
+                                <span><i class="far fa-clock mr-1"></i> 1 Month</span>
+                                <span><i class="fas fa-crown mr-1"></i> Luxury Focus</span>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-navy-900 mb-2">Luxury Service Excellence</h3>
+                            <p class="text-slate-600 text-xs leading-relaxed font-light line-clamp-3">
+                                Intensive online training in 5-star etiquette, body language, and luxury service recovery.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button class="open-modal-btn w-full py-3 bg-navy-900 text-white hover:bg-gold-500 hover:text-navy-950 font-bold text-xs uppercase tracking-widest rounded-xl transition-all">
+                            View Curriculum Details
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. INTERACTIVE TUITION CALCULATOR -->
+    <section id="calculator" class="py-20 bg-navy-900 text-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-400 block mb-2">Tuition Transparency</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold">Interactive Online Tuition Calculator</h2>
+                <p class="text-slate-300 text-xs mt-2 font-light">Estimate your online tuition with available financial plans, scholarships, and payment installments.</p>
+            </div>
+
+            <div class="glass-card p-8 rounded-3xl grid md:grid-cols-2 gap-8 items-center border border-gold-500/30">
+                <div class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-200 mb-2">Select Program</label>
+                        <select id="calc-program" class="w-full px-4 py-3 rounded-xl bg-navy-950/90 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none">
+                            <option value="2450">Hotel & Resort Management Diploma ($2,450)</option>
+                            <option value="1650">Food & Beverage Leadership ($1,650)</option>
+                            <option value="1250">Event & Wedding Planning ($1,250)</option>
+                            <option value="950">Front Office & Concierge Specialist ($950)</option>
+                            <option value="1850">Executive Revenue Management ($1,850)</option>
+                            <option value="550">Luxury Service Excellence ($550)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-200 mb-2">Payment Plan Option</label>
+                        <select id="calc-plan" class="w-full px-4 py-3 rounded-xl bg-navy-950/90 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none">
+                            <option value="full">Pay in Full (10% Pay-In-Full Discount)</option>
+                            <option value="3month">3-Month Installment Plan (0% Interest)</option>
+                            <option value="6month">6-Month Installment Plan</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-200 mb-2">Apply Online Grant / Discount</label>
+                        <select id="calc-grant" class="w-full px-4 py-3 rounded-xl bg-navy-950/90 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none">
+                            <option value="none">Standard Enrollment</option>
+                            <option value="early">Early Online Registration Grant ($200 off)</option>
+                            <option value="military">Hospitality Career Changer Grant ($150 off)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="bg-navy-950/80 p-6 rounded-2xl border border-slate-800 text-center space-y-4">
+                    <span class="text-[11px] font-bold uppercase tracking-widest text-gold-400 block">Estimated Tuition Breakdown</span>
+                    
+                    <div>
+                        <p class="text-3xl font-serif font-bold text-gold-300" id="calc-total">$2,025 USD</p>
+                        <p class="text-xs text-slate-400 mt-1" id="calc-subtext">Includes 10% pay-in-full discount</p>
+                    </div>
+
+                    <div class="border-t border-slate-800 pt-3 text-xs text-slate-300 space-y-1 text-left">
+                        <div class="flex justify-between"><span>Base Tuition:</span> <span id="calc-base">$2,450</span></div>
+                        <div class="flex justify-between text-emerald-400"><span>Applied Savings:</span> <span id="calc-savings">-$425</span></div>
+                        <div class="flex justify-between font-bold text-white pt-1"><span>Monthly Payment:</span> <span id="calc-monthly">Single Payment</span></div>
+                    </div>
+
+                    <a href="#enroll" class="block w-full gold-gradient-bg text-navy-950 font-bold text-xs uppercase tracking-widest py-3 rounded-xl hover:brightness-110 transition-all text-center mt-2">
+                        Lock In This Rate & Enroll
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. STUDENT PORTAL & LMS INTERACTIVE DEMO -->
+    <section id="lms-demo" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600 block mb-2">Student Experience</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900">Interactive Online Student Portal Preview</h2>
+                <p class="text-slate-600 text-xs mt-2 font-light">Experience the modern LMS virtual classroom environment where you will study, submit assignments, and connect with faculty.</p>
+            </div>
+
+            <!-- LMS Mock Desktop Shell -->
+            <div class="bg-navy-900 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
+                <div class="bg-navy-950 px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+                    <div class="flex items-center space-x-3">
+                        <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                        <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                        <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                        <span class="text-xs text-slate-400 font-mono ml-4">venus-lms.edu/student-portal</span>
+                    </div>
+                    <span class="text-xs text-gold-400 font-semibold"><i class="fas fa-user-circle mr-1.5"></i> Student Portal Active</span>
+                </div>
+
+                <div class="p-6 md:p-10 grid md:grid-cols-12 gap-8 text-white">
+                    <!-- Sidebar Navigation Mock -->
+                    <div class="md:col-span-4 bg-navy-950/60 p-5 rounded-2xl border border-slate-800 space-y-3">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-gold-400 block mb-2">Current Enrolled Module</span>
+                        <div class="p-3 bg-navy-800/80 rounded-xl border border-gold-500/30 text-xs">
+                            <p class="font-bold text-white">Module 3: Hotel Revenue Analytics</p>
+                            <p class="text-[10px] text-slate-400 mt-0.5">Instructor: Executive GM NYC</p>
+                        </div>
+                        <div class="space-y-1 text-xs">
+                            <button class="w-full text-left p-2.5 rounded-lg bg-gold-500/10 text-gold-300 font-semibold flex justify-between items-center">
+                                <span><i class="fas fa-play-circle mr-2"></i> Lecture 3.1 Video</span>
+                                <span class="text-[10px] bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded">Completed</span>
+                            </button>
+                            <button class="w-full text-left p-2.5 rounded-lg hover:bg-navy-800 text-slate-300 flex justify-between items-center">
+                                <span><i class="fas fa-file-pdf mr-2"></i> NYC Case Study Guide</span>
+                                <span class="text-[10px] text-slate-400">PDF</span>
+                            </button>
+                            <button class="w-full text-left p-2.5 rounded-lg hover:bg-navy-800 text-slate-300 flex justify-between items-center">
+                                <span><i class="fas fa-video mr-2"></i> Live Masterclass Recording</span>
+                                <span class="text-[10px] text-slate-400">45 Min</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Main Video Player & Interactive Dashboard -->
+                    <div class="md:col-span-8 space-y-4">
+                        <div class="relative bg-navy-950 rounded-2xl overflow-hidden h-64 sm:h-80 border border-slate-800 flex items-center justify-center group">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=80" alt="LMS Classroom" class="w-full h-full object-cover opacity-40">
+                            <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                                <div class="w-16 h-16 rounded-full gold-gradient-bg flex items-center justify-center text-navy-950 text-2xl shadow-2xl cursor-pointer hover:scale-110 transition-transform">
+                                    <i class="fas fa-play ml-1"></i>
+                                </div>
+                                <p class="font-serif text-lg font-bold text-white mt-4">Preview Video Lecture: "Dynamic Room Pricing Strategies"</p>
+                                <p class="text-xs text-slate-300 font-light mt-1">HD Stream • Subtitles Available • Downloadable Transcripts</p>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="p-3 bg-navy-950/60 rounded-xl border border-slate-800">
+                                <p class="text-lg font-bold text-gold-300">100%</p>
+                                <p class="text-[10px] text-slate-400 uppercase">Self-Paced Stream</p>
+                            </div>
+                            <div class="p-3 bg-navy-950/60 rounded-xl border border-slate-800">
+                                <p class="text-lg font-bold text-gold-300">24/7</p>
+                                <p class="text-[10px] text-slate-400 uppercase">Portal Access</p>
+                            </div>
+                            <div class="p-3 bg-navy-950/60 rounded-xl border border-slate-800">
+                                <p class="text-lg font-bold text-gold-300">1-on-1</p>
+                                <p class="text-[10px] text-slate-400 uppercase">NYC Faculty Support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FAQ ACCORDION -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest text-gold-600 block mb-2">Got Questions?</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-navy-900">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4" id="faq-accordion">
+                
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left font-serif font-bold text-navy-900 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span>Are these hospitality training programs 100% online?</span>
+                        <i class="fas fa-chevron-down text-gold-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 pt-0 text-xs text-slate-600 leading-relaxed font-light border-t border-slate-100">
+                        Yes! All training programs, coursework, video lectures, assignments, and exams are delivered 100% online. You can study from anywhere in the US or globally at your own pace.
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left font-serif font-bold text-navy-900 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span>Is Venus Institute based in New York, US?</span>
+                        <i class="fas fa-chevron-down text-gold-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 pt-0 text-xs text-slate-600 leading-relaxed font-light border-t border-slate-100">
+                        Yes, our institute is headquartered in New York, NY, USA. Your digital diplomas and certificates carry our US institutional designation, providing strong credential credibility with international hotel chains and employers.
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left font-serif font-bold text-navy-900 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span>What are the technical or hardware requirements?</span>
+                        <i class="fas fa-chevron-down text-gold-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 pt-0 text-xs text-slate-600 leading-relaxed font-light border-t border-slate-100">
+                        All you need is a laptop, desktop, or mobile tablet with a stable internet connection and a standard modern web browser (Chrome, Safari, Firefox). Our student portal is optimized for both desktop and mobile viewing.
+                    </div>
+                </div>
+
+                <div class="border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="faq-btn w-full p-5 text-left font-serif font-bold text-navy-900 flex justify-between items-center hover:bg-slate-50 transition-colors">
+                        <span>How does career placement support work for online students?</span>
+                        <i class="fas fa-chevron-down text-gold-600 transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden p-5 pt-0 text-xs text-slate-600 leading-relaxed font-light border-t border-slate-100">
+                        Upon completing your program, you gain lifetime access to our online career portal. Our New York career coaching team provides 1-on-1 resume reviews, mock interview sessions, and direct placement recommendations across our network of hotel and restaurant partners.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. ONLINE ENROLLMENT FORM & DIRECT CONTACT SECTION -->
+    <section id="enroll" class="py-20 bg-navy-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Contact Info Left -->
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gold-400 block">Direct Admissions</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold leading-tight">
+                        Enroll Online or <span class="gold-gradient-text italic font-normal">Contact Us Today</span>
+                    </h2>
+                    <p class="text-slate-300 text-sm leading-relaxed font-light">
+                        Our admissions team in New York is ready to answer your questions and assist you in selecting the ideal online program for your career goals.
+                    </p>
+
+                    <div class="space-y-4 pt-4 border-t border-white/10">
+                        <a href="tel:3476495804" class="flex items-center space-x-4 p-4 rounded-2xl bg-navy-950/80 border border-gold-500/30 hover:border-gold-400 transition-all">
+                            <div class="w-12 h-12 rounded-xl gold-gradient-bg text-navy-950 flex items-center justify-center text-lg flex-shrink-0 font-bold">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Call Admissions Direct</h4>
+                                <p class="text-xs text-gold-300 font-semibold">347-649-5804</p>
+                                <p class="text-[10px] text-slate-400">Click to dial directly</p>
+                            </div>
+                        </a>
+
+                        <a href="mailto:aamralex@gmail.com" class="flex items-center space-x-4 p-4 rounded-2xl bg-navy-950/80 border border-gold-500/30 hover:border-gold-400 transition-all">
+                            <div class="w-12 h-12 rounded-xl gold-gradient-bg text-navy-950 flex items-center justify-center text-lg flex-shrink-0 font-bold">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">Email Admissions Desk</h4>
+                                <p class="text-xs text-gold-300 font-semibold">aamralex@gmail.com</p>
+                                <p class="text-[10px] text-slate-400">Click to send an email</p>
+                            </div>
+                        </a>
+
+                        <div class="flex items-center space-x-4 p-4 rounded-2xl bg-navy-950/80 border border-slate-800">
+                            <div class="w-12 h-12 rounded-xl bg-slate-800 text-gold-400 flex items-center justify-center text-lg flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm text-white">New York Headquarters</h4>
+                                <p class="text-xs text-slate-300 font-light">New York, NY, USA</p>
+                                <p class="text-[10px] text-slate-400">Serving students worldwide</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Online Enrollment Form Right -->
+                <div class="lg:col-span-7" id="contact">
+                    <div class="glass-card p-8 sm:p-10 rounded-3xl shadow-2xl">
+                        <h3 class="font-serif text-2xl font-bold text-gold-300 mb-6">Online Enrollment Application</h3>
+                        <form id="online-enrollment-form" class="space-y-4">
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-200 mb-1.5">First Name *</label>
+                                    <input type="text" required class="w-full px-4 py-3 rounded-xl bg-navy-950/80 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none" placeholder="First Name">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-200 mb-1.5">Last Name *</label>
+                                    <input type="text" required class="w-full px-4 py-3 rounded-xl bg-navy-950/80 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none" placeholder="Last Name">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-200 mb-1.5">Phone Number *</label>
+                                    <input type="tel" required class="w-full px-4 py-3 rounded-xl bg-navy-950/80 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none" placeholder="347-649-5804">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-200 mb-1.5">Email Address *</label>
+                                    <input type="email" required class="w-full px-4 py-3 rounded-xl bg-navy-950/80 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none" placeholder="aamralex@gmail.com">
+                                </div>
+                            </div>
+
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-200 mb-1.5">Selected Online Course *</label>
+                                    <select id="form-program-select" required class="w-full px-4 py-3 rounded-xl bg-navy-950/80 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none">
+                                        <option value="">Select an Online Program</option>
+                                        <option>Online Diploma in Hotel & Resort Management</option>
+                                        <option>Food & Beverage Leadership</option>
+                                        <option>Online Certificate in Event & Wedding Planning</option>
+                                        <option>Front Office & Concierge Specialist</option>
+                                        <option>Executive Revenue Management</option>
+                                        <option>Luxury Service Excellence</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-200 mb-1.5">Country / Location</label>
+                                    <input type="text" required class="w-full px-4 py-3 rounded-xl bg-navy-950/80 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none" placeholder="e.g. United States / International">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold uppercase tracking-wider text-slate-200 mb-1.5">Inquiry or Career Objectives</label>
+                                <textarea rows="3" class="w-full px-4 py-3 rounded-xl bg-navy-950/80 border border-slate-700 text-white text-xs focus:border-gold-500 focus:outline-none" placeholder="Tell us about your background or questions..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full gold-gradient-bg text-navy-950 font-bold text-xs uppercase tracking-widest py-4 rounded-xl shadow-xl hover:brightness-110 transition-all">
+                                Submit Online Application
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. FOOTER -->
+    <footer class="bg-navy-950 text-slate-400 py-12 border-t border-gold-500/20 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-10">
+                <div class="space-y-3">
+                    <div class="font-serif font-bold text-lg text-white">VENUS INSTITUTE</div>
+                    <p class="text-slate-400 leading-relaxed font-light">100% Online Hospitality & Hotel Management Training based in New York, USA.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-gold-400 transition-colors">100% Online Advantage</a></li>
+                        <li><a href="#programs" class="hover:text-gold-400 transition-colors">Online Courses</a></li>
+                        <li><a href="#calculator" class="hover:text-gold-400 transition-colors">Tuition Calculator</a></li>
+                        <li><a href="#enroll" class="hover:text-gold-400 transition-colors">Online Application</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">Direct Contact</h4>
+                    <ul class="space-y-2 text-slate-300">
+                        <li><i class="fas fa-phone-alt text-gold-400 mr-2"></i> <a href="tel:3476495804" class="hover:text-gold-400">347-649-5804</a></li>
+                        <li><i class="fas fa-envelope text-gold-400 mr-2"></i> <a href="mailto:aamralex@gmail.com" class="hover:text-gold-400">aamralex@gmail.com</a></li>
+                        <li><i class="fas fa-map-marker-alt text-gold-400 mr-2"></i> New York, NY, USA</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-3 uppercase tracking-wider text-[11px]">New York Headquarters</h4>
+                    <p class="mb-3 text-slate-400 font-light">Online Admissions & Distance Learning Office • New York, NY, USA</p>
+                </div>
+            </div>
+            <div class="pt-6 border-t border-slate-800 text-center text-slate-500 font-light flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Venus Institute of Hospitality Management (New York, USA). All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-slate-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-300">Distance Learning Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 10. INTERACTIVE PROGRAM SYLLABUS MODAL -->
+    <div id="program-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-xl w-full overflow-hidden shadow-2xl border border-gold-500/30 transform transition-all">
+            <div class="bg-navy-900 p-6 text-white flex justify-between items-start border-b border-gold-500/20">
+                <div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-gold-400 block mb-1">Online Curriculum Breakdown</span>
+                    <h3 class="font-serif font-bold text-xl text-white" id="modal-title">Program Title</h3>
+                </div>
+                <button id="close-modal-btn" class="text-slate-400 hover:text-white text-2xl focus:outline-none">&times;</button>
+            </div>
+            <div class="p-6 space-y-5 max-h-[75vh] overflow-y-auto">
+                <div class="grid grid-cols-2 gap-4 bg-slate-50 p-4 rounded-2xl text-xs">
+                    <div>
+                        <p class="text-slate-400 uppercase tracking-wider font-semibold">Online Duration</p>
+                        <p class="font-bold text-navy-900 mt-0.5" id="modal-duration">--</p>
+                    </div>
+                    <div>
+                        <p class="text-slate-400 uppercase tracking-wider font-semibold">Tuition Fee</p>
+                        <p class="font-bold text-gold-600 mt-0.5" id="modal-tuition">--</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-navy-900 mb-1.5">Overview</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-light" id="modal-overview"></p>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-navy-900 mb-1.5">Online Modules</h4>
+                    <div class="space-y-2" id="modal-syllabus-list"></div>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-navy-900 mb-1">Career Placement Outcomes</h4>
+                    <p class="text-xs font-semibold text-gold-600" id="modal-outcomes"></p>
+                </div>
+
+                <button id="modal-apply-trigger" class="w-full gold-gradient-bg text-navy-950 font-bold py-3.5 rounded-xl text-xs uppercase tracking-widest shadow-lg hover:brightness-110 transition-all">
+                    Enroll In This Program
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Navigation Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-times');
+        });
+
+        document.querySelectorAll('.mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.add('fa-bars');
+                menuIcon.classList.remove('fa-times');
+            });
+        });
+
+        // Course Search & Filter Logic
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const programCards = document.querySelectorAll('.program-card');
+        const searchInput = document.getElementById('course-search-input');
+
+        function filterCourses() {
+            const activeFilter = document.querySelector('.filter-btn.gold-gradient-bg').getAttribute('data-filter');
+            const searchTerm = searchInput.value.toLowerCase().trim();
+
+            programCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                const title = card.getAttribute('data-title').toLowerCase();
+                const overview = card.getAttribute('data-overview').toLowerCase();
+
+                const matchesFilter = (activeFilter === 'all' || category === activeFilter);
+                const matchesSearch = (title.includes(searchTerm) || overview.includes(searchTerm));
+
+                if (matchesFilter && matchesSearch) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('gold-gradient-bg', 'text-navy-950', 'shadow-md');
+                    b.classList.add('bg-white', 'text-slate-700');
+                });
+                btn.classList.add('gold-gradient-bg', 'text-navy-950', 'shadow-md');
+                btn.classList.remove('bg-white', 'text-slate-700');
+
+                filterCourses();
+            });
+        });
+
+        if (searchInput) {
+            searchInput.addEventListener('input', filterCourses);
+        }
+
+        // Tuition Calculator Logic
+        const calcProgram = document.getElementById('calc-program');
+        const calcPlan = document.getElementById('calc-plan');
+        const calcGrant = document.getElementById('calc-grant');
+
+        function updateCalculator() {
+            let base = parseFloat(calcProgram.value);
+            let savings = 0;
+            let planText = "Single Payment";
+
+            if (calcPlan.value === 'full') {
+                savings += base * 0.10; // 10% discount
+            } else if (calcPlan.value === '3month') {
+                planText = `$${Math.round((base - savings) / 3)} / Month (3 Months)`;
+            } else if (calcPlan.value === '6month') {
+                planText = `$${Math.round((base - savings + 100) / 6)} / Month (6 Months)`;
+            }
+
+            if (calcGrant.value === 'early') {
+                savings += 200;
+            } else if (calcGrant.value === 'military') {
+                savings += 150;
+            }
+
+            let total = Math.max(0, base - savings);
+
+            document.getElementById('calc-base').innerText = `$${base.toLocaleString()} USD`;
+            document.getElementById('calc-savings').innerText = `-$${Math.round(savings).toLocaleString()} USD`;
+            document.getElementById('calc-total').innerText = `$${Math.round(total).toLocaleString()} USD`;
+            document.getElementById('calc-monthly').innerText = planText;
+        }
+
+        if (calcProgram && calcPlan && calcGrant) {
+            calcProgram.addEventListener('change', updateCalculator);
+            calcPlan.addEventListener('change', updateCalculator);
+            calcGrant.addEventListener('change', updateCalculator);
+            updateCalculator();
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('i');
+
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+
+        // Syllabus Modal Logic
+        const modal = document.getElementById('program-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDuration = document.getElementById('modal-duration');
+        const modalTuition = document.getElementById('modal-tuition');
+        const modalOverview = document.getElementById('modal-overview');
+        const modalSyllabusList = document.getElementById('modal-syllabus-list');
+        const modalOutcomes = document.getElementById('modal-outcomes');
+        const modalApplyTrigger = document.getElementById('modal-apply-trigger');
+        const formProgramSelect = document.getElementById('form-program-select');
+
+        document.querySelectorAll('.open-modal-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const card = e.target.closest('.program-card');
+                const title = card.getAttribute('data-title');
+                const duration = card.getAttribute('data-duration');
+                const tuition = card.getAttribute('data-tuition');
+                const overview = card.getAttribute('data-overview');
+                const outcomes = card.getAttribute('data-outcomes');
+                const syllabus = card.getAttribute('data-syllabus').split(', ');
+
+                modalTitle.innerText = title;
+                modalDuration.innerText = duration;
+                modalTuition.innerText = tuition;
+                modalOverview.innerText = overview;
+                modalOutcomes.innerText = outcomes;
+
+                modalSyllabusList.innerHTML = syllabus.map(s => 
+                    `<div class="flex items-center text-xs text-slate-700 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                        <i class="fas fa-check-circle text-gold-500 mr-2"></i>${s}
+                     </div>`
+                ).join('');
+
+                modal.classList.remove('hidden');
+
+                modalApplyTrigger.onclick = () => {
+                    modal.classList.add('hidden');
+                    if (formProgramSelect) {
+                        for (let option of formProgramSelect.options) {
+                            if (option.text.toLowerCase().includes(title.toLowerCase().substring(0, 10))) {
+                                option.selected = true;
+                                break;
+                            }
+                        }
+                    }
+                    document.getElementById('enroll').scrollIntoView({ behavior: 'smooth' });
+                };
+            });
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+
+        // Toast Notification Trigger
+        function triggerToast(title, message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-title').innerText = title;
+            document.getElementById('toast-message').innerText = message;
+            
+            toast.classList.remove('translate-x-full');
+            setTimeout(() => {
+                toast.classList.add('translate-x-full');
+            }, 5000);
+        }
+
+        // Form Submission Handlers
+        const heroForm = document.getElementById('hero-quick-form');
+        if (heroForm) {
+            heroForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                triggerToast("Prospectus Sent", "Our online admissions team has logged your inquiry. You will receive program details at your provided email shortly.");
+                e.target.reset();
+            });
+        }
+
+        const onlineEnrollForm = document.getElementById('online-enrollment-form');
+        if (onlineEnrollForm) {
+            onlineEnrollForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                triggerToast("Online Application Received", "Thank you for applying to Venus Institute! Our NY office (Phone: 347-649-5804) will contact you within 24 hours.");
+                e.target.reset();
+            });
+        }
+    </script>
+</body>
+</html>
